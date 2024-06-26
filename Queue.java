@@ -1,3 +1,8 @@
+/*
+ * Circular Queue implementation
+ * All operations time complexity is O(1)
+ * Space complexity O(n) where n is size of the queue.
+ */
 class Queue {
     int capacity;
     int front;
@@ -17,6 +22,7 @@ class Queue {
             return "Add operation failed. Queue is full!";
         }
         if(front == -1) {
+            // entering first element in queue
             q[++rear] = n;
             ++front;
         } else if(front != 0 && rear == capacity-1) {
