@@ -1,3 +1,8 @@
+/*
+ * Given a linekd list 1->2->3->4->5 convert it into 2->1->4->3->5
+ * Identify the pattern and implement it
+ * MS hiring manager round question
+ */
 public class ModifyLinkedList {
     private int val;
     private ModifyLinkedList nextNode;
@@ -26,20 +31,9 @@ public class ModifyLinkedList {
             prev = curr;
             curr = curr.nextNode;
             next = curr == null? null: curr.nextNode;
-
-
         }
         return linkedListHead;
     }
-    // 1->2
-    // 0->1->2->3
-    // 
-
-    // 1->2->3->4
-    // prev - null, curr = 1, next. = 2
-    // 1->2 --- 1->3, 2->1, 2->1->3->4, curr = 3, prev =1, next = 4
-    // 3->4 -- 3->null, 1->4, 4->3, prev = 3 next = null
-    // 2-1->4->3->null;
 
     public static void printLL(ModifyLinkedList linkedListHead) {
         // int count = 4;
@@ -51,7 +45,6 @@ public class ModifyLinkedList {
     }
 
     public static void main(String [] args) {
-        // you can write to stdout for debugging purposes, e.g.
         int []linkedListArr = {1,2,3,4,5,6};
         ModifyLinkedList linkedList = new ModifyLinkedList(0);
         ModifyLinkedList prevPtr = linkedList;
