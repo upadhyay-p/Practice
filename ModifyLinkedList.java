@@ -1,7 +1,7 @@
 /*
  * Given a linekd list 1->2->3->4->5 convert it into 2->1->4->3->5
  * Identify the pattern and implement it
- * MS hiring manager round question
+ * MS question
  */
 public class ModifyLinkedList {
     private int val;
